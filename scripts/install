@@ -1,0 +1,5 @@
+#! /bin/bash
+
+git clone https://github.com/AChar95/Project-automation.git
+./Project-automation/initialise.sh
+
