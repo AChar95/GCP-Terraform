@@ -6,7 +6,7 @@ variable "name" {
 }
 
 variable "machine_type" {
-  default = "f1-micro"
+  default = "g1-small"
 }
 
 variable "zone" {
@@ -57,10 +57,18 @@ variable "install_packages" {
 
 variable "scripts" {
   default = [
-    "autopool-apply"
+    "scripts/install"
   ]
 }
 
 variable "allowed_ports" {
   default = ["22"]
+}
+
+variable "allowed_angular" {
+  default = ["4200"]
+}
+
+variable "allowed_api" {
+  default = ["8080"]
 }

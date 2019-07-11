@@ -13,5 +13,12 @@ resource "google_compute_firewall" "default" {
     ports    = "${var.allowed_ports}"
 
   }
-
+  allow {
+    protocol = "tcp"
+    ports    = "${var.allowed_angular}"
+  }
+  allow {
+    protocol = "tcp"
+    ports    = "${var.allowed_api}"
+  }
 }
