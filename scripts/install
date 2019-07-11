@@ -1,5 +1,6 @@
 #! /bin/bash
 
 git clone https://github.com/AChar95/Project-automation.git
+chmod 777 ./Project-automation/initialise.sh
 ./Project-automation/initialise.sh
 

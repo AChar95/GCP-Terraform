@@ -33,12 +33,11 @@ variable "private_key" {
 }
 
 variable "package_manager" {
-  default = "yum"
+  default = "apt"
 }
 
 variable "update_packages" {
   default = {
-    "yum" = "sudo yum update -y",
     "apt" = "sudo apt update && sudo apt upgrade -y"
   }
 }
@@ -52,13 +51,14 @@ variable "packages" {
 
 variable "install_packages" {
   default = {
-    "yum" = "sudo yum install -y",
     "apt" = "sudo apt install -y"
   }
 }
 
 variable "scripts" {
-  default = []
+  default = [
+    "autopool-apply"
+  ]
 }
 
 variable "allowed_ports" {
