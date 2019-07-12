@@ -2,7 +2,18 @@ variable "project" {
   default = "project-shard-12345"
 }
 variable "name" {
-  default = "minecraft1234"
+  default = "mongodb"
+}
+variable "name1" {
+  default = "api"
+}
+
+variable "name2" {
+  default = "angular"
+}
+
+variable "name3" {
+  default = "jenkins"
 }
 
 variable "machine_type" {
