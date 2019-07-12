@@ -71,6 +71,12 @@ variable "scripts" {
     "scripts/install"
   ]
 }
+variable "mongo" {
+  default = "scripts/mongodb"
+}
+variable "api" {
+  default = "scripts/api"
+}
 
 variable "allowed_ports" {
   default = ["22"]
