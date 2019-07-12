@@ -72,10 +72,14 @@ variable "scripts" {
   ]
 }
 variable "mongo" {
-  default = "scripts/mongodb"
+  default = [
+    "scripts/mongodb"
+  ]
 }
 variable "api" {
-  default = "scripts/api"
+  default = [
+    "scripts/api"
+  ]
 }
 
 variable "allowed_ports" {
@@ -88,4 +92,8 @@ variable "allowed_angular" {
 
 variable "allowed_api" {
   default = ["8080"]
+}
+
+variable "allowed_mongo" {
+  default = ["27017"]
 }

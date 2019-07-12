@@ -21,4 +21,8 @@ resource "google_compute_firewall" "default" {
     protocol = "tcp"
     ports    = "${var.allowed_api}"
   }
+  allow {
+    protocol = "tcp"
+    ports    = "${var.allowed_mongo}"
+  }
 }

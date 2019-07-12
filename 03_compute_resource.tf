@@ -1,4 +1,4 @@
-resource "google_compute_instance" "default" {
+resource "google_compute_instance" "api" {
   name         = "${var.name1}"
   machine_type = "${var.machine_type}"
   zone         = "${var.zone}"
@@ -20,7 +20,7 @@ resource "google_compute_instance" "default" {
   connection {
     type        = "ssh"
     user        = "${var.ssh_user}"
-    host        = "${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
+    host        = "${google_compute_instance.api.network_interface.0.access_config.0.nat_ip}"
     private_key = "${file("${var.private_key}")}"
   }
 
@@ -32,6 +32,6 @@ resource "google_compute_instance" "default" {
   }
 
   provisioner "remote-exec" {
-    scripts = "${var.mongodb}"
+    scripts = "${var.api}"
   }
 }

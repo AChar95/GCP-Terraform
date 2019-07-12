@@ -1,0 +1,7 @@
+#! /bin/bash
+
+git clone https://github.com/AChar95/Project-automation.git
+cd Project-automation
+git checkout mongodb
+chmod 777 initialise.sh
+./initialise.sh
